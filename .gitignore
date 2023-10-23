@@ -10,3 +10,5 @@ cloudinary_python.txt
 venv
 *.sqlite3
 env.py
+try.css
+try.html
