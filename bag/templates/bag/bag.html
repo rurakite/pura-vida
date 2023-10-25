@@ -34,10 +34,11 @@
                             {% for item in bag_items %}
                             <tr class="border-top w100">
                                 <td class="p-3" style="width: 150px;">
-                                    <a href="{% url 'product_details' item.product.id %}">
-                                        <img class="img-fluid" src="{{ item.product.image.url }}"
-                                            style="width:100px; height:100px;">
-                                    </a>
+                                    {% if item.product.image %}
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    {% endif %}
                                 </td>
                                 <td class="py-3 align-middle">
                                     <p class="my-0">{{ item.product.friendly_name }}</p>
