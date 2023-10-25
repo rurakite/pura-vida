@@ -186,6 +186,7 @@ STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = env.STRIPE_PUBLIC_KEY
 STRIPE_SECRET_KEY = env.STRIPE_SECRET_KEY
 STRIPE_WH_SECRET = env.STRIPE_WH_SECRET
+DEFAULT_FROM_EMAIL = 'puravida@example.com'
 
 
 # Default primary key field type
