@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import dj_database_url
-import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +28,7 @@ SECRET_KEY = 'django-insecure-v+!1oajy^rm@-w6bu@5q8h\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pura-vida.herokuapp.com', 'localhost', '']
+ALLOWED_HOSTS = ['pura-vida-611d56be2c03.herokuapp.com', 'localhost', '']
 
 
 # Application definition
@@ -184,9 +183,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = env.STRIPE_PUBLIC_KEY
-STRIPE_SECRET_KEY = env.STRIPE_SECRET_KEY
-STRIPE_WH_SECRET = env.STRIPE_WH_SECRET
+STRIPE_PUBLIC_KEY = os.environ.get.STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY = os.environ.get.STRIPE_SECRET_KEY
+STRIPE_WH_SECRET = os.environ.get.STRIPE_WH_SECRET
 DEFAULT_FROM_EMAIL = 'puravida@example.com'
 
 
